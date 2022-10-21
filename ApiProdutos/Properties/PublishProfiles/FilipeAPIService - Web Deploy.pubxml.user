@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtXq3sx3Ld0iu38N8tAkUSgAAAAACAAAAAAAQZgAAAAEAACAAAAB397JIkZGtTaFvbI7TJCsMdFGcA+IM4ngwXOcOJQrDNgAAAAAOgAAAAAIAACAAAAD/ewKNFZid8YEBcl/NUXe0stvGzNy43vVJEvMclMEHkoAAAABfwO3oVaujmywaKsJUdJMawIEGnkQCI1rVbYO/jpLxuxH2kuZ+ir8ySgmsoHxPZje0JVWqFNEKmkomoATf5j5yEnYsQ2f9i8BfKe3jLtU/77X3rlP8vW2tVdia92J3ZErwoZbnnFgYsLPMrA/CZOkoIPVsq+x4oNykH6wkkjQ5uUAAAAB/cUWQ0OwTE2yYBPI6vwsBuLeu4EJBI0rn3zWSbUbID3CVhiIq/ljQx0/HOt4dCCZDHPbacLJRl2ogIqN+xoEQ</EncryptedPassword>
+    <History>True|2022-10-21T00:16:04.6097365Z;True|2022-10-20T21:01:45.2394513-03:00;True|2022-10-20T20:56:11.7524804-03:00;True|2022-10-20T20:54:13.7445167-03:00;True|2022-10-20T20:47:31.4674226-03:00;True|2022-10-20T20:42:14.7612004-03:00;True|2022-10-20T20:32:52.9314505-03:00;False|2022-10-20T20:27:15.8685405-03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AppProdutosDB">
+      <Value>Data Source=tcp:apiprodutosdbdbserver.database.windows.net,1433%3bInitial Catalog=ApiProdutosDB%3bUser Id=filipesc%40apiprodutosdbdbserver%3bPassword=master.007</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="ApiProdutos.Data.AppDbContext">
+      <Value>Data Source=tcp:apiprodutosdbdbserver.database.windows.net,1433%3bInitial Catalog=ApiProdutosDB%3bUser Id=filipesc%40apiprodutosdbdbserver%3bPassword=master.007</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
