@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="FilipeAPIService" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Projetos\\API-C--SQLServer\\ApiProdutos\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Projetos\\API-C--SQLServer\\ApiProdutos\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
   </parameter>
   <parameter name="ApiProdutos.Data.AppDbContext" description="" value="Data Source=tcp:apiprodutosdbdbserver.database.windows.net,1433;Initial Catalog=ApiProdutosDB;User Id=filipesc@apiprodutosdbdbserver;Password=master.007" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\Projetos\\API-C--SQLServer\\ApiProdutos\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\ApiProdutos\.Data\.AppDbContext\.sql$" />
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^E:\\Projetos\\API-C--SQLServer\\ApiProdutos\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\ApiProdutos\.Data\.AppDbContext\.sql$" />
   </parameter>
 </parameters>

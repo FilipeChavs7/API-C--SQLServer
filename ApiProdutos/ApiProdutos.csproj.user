@@ -10,6 +10,6 @@
     <WebStackScaffolding_DbContextTypeFullName>ApiProdutos.Data.AppDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>False</WebStackScaffolding_IsViewGenerationSelected>
-    <NameOfLastUsedPublishProfile>D:\Projetos\API-C--SQLServer\ApiProdutos\Properties\PublishProfiles\FilipeAPIService - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>E:\Projetos\API-C--SQLServer\ApiProdutos\Properties\PublishProfiles\FilipeAPIService - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

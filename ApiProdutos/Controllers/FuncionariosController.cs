@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ApiProdutos.Data;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace ApiProdutos.Controllers
 {
@@ -22,6 +23,7 @@ namespace ApiProdutos.Controllers
 
         // GET: Listagem de todos os funcionarios
         [HttpGet]
+        [SwaggerOperation(Summary = "Permite listar todos os funcionários.")]
         public async Task<ActionResult<IEnumerable<Funcionario>>> ListFuncionarios()
         {
             return await _context.Funcionarios.ToListAsync();
@@ -29,6 +31,7 @@ namespace ApiProdutos.Controllers
 
         // GET: Busca de somente um funcionario
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Busca um funcionário de acordo com o ID.")]
         public async Task<ActionResult<Funcionario>> GetFuncionario(int id)
         {
             var funcionario = await _context.Funcionarios.FindAsync(id);
@@ -41,6 +44,7 @@ namespace ApiProdutos.Controllers
 
         // PUT: Atualizar informação de um funcionario
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Atualiza as informações do funcionário escolhido.")]
         public async Task<IActionResult> PutFuncionario(int id, Funcionario funcionario)
         {
             if (id != funcionario.funcionarioId)
@@ -65,6 +69,7 @@ namespace ApiProdutos.Controllers
 
         // POST: Criar um novo funcionario
         [HttpPost]
+        [SwaggerOperation(Summary = "Cria um novo funcionário com as informações inseridas.")]
         public async Task<ActionResult<Funcionario>> CreateFuncionario(Funcionario funcionario)
         {
             _context.Funcionarios.Add(funcionario);
@@ -75,6 +80,7 @@ namespace ApiProdutos.Controllers
 
         // DELETE: Deleta um funcionario
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Deleta um funcionário de acordo com o ID.")]
         public async Task<IActionResult> DeleteFuncionario(int id)
         {
             var funcionario = await _context.Funcionarios.FindAsync(id);

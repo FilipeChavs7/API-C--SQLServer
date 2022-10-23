@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ApiProdutos.Data;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace ApiProdutos.Controllers
 {
@@ -22,6 +23,7 @@ namespace ApiProdutos.Controllers
 
         // GET: Listagem de todos os departamentos
         [HttpGet]
+        [SwaggerOperation(Summary = "Permite listar todos os departamentos.")]
         public async Task<ActionResult<IEnumerable<Departamento>>> ListDepartamentos()
         {
             return await _context.Departamentos.ToListAsync();
@@ -29,6 +31,7 @@ namespace ApiProdutos.Controllers
 
         // GET: Busca de somente um departamento
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Permite buscar um departamento existente.")]
         public async Task<ActionResult<Departamento>> GetDepartamento(int id)
         {
             var departamento = await _context.Departamentos.FindAsync(id);
@@ -41,6 +44,7 @@ namespace ApiProdutos.Controllers
 
         // PUT: Atualizar informação de um departamento
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Atualiza os dados de um departamento.")]
         public async Task<IActionResult> PutDepartamento(int id, Departamento departamento)
         {
             if (id != departamento.departamentoId)
@@ -65,6 +69,7 @@ namespace ApiProdutos.Controllers
 
         // POST: Criar um novo departamento
         [HttpPost]
+        [SwaggerOperation(Summary = "Cria um novo departamento com os dados inseridos.")]
         public async Task<ActionResult<Departamento>> CreateDepartamento(Departamento departamento)
         {
             _context.Departamentos.Add(departamento);

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ApiProdutos.Data;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace ApiProdutos.Controllers
 {
@@ -22,6 +23,7 @@ namespace ApiProdutos.Controllers
 
         // GET: Listagem de todos os produtos
         [HttpGet]
+        [SwaggerOperation(Summary = "Permite listar todos os produtos.")]
         public async Task<ActionResult<IEnumerable<Produto>>> ListProdutos()
         {
             return await _context.Produtos.ToListAsync();
@@ -29,6 +31,7 @@ namespace ApiProdutos.Controllers
 
         // GET: Busca de somente um produto
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Busca apenas um produto de acordo com o ID.")]
         public async Task<ActionResult<Produto>> GetProduto(int id)
         {
             var produto = await _context.Produtos.FindAsync(id);
@@ -41,6 +44,7 @@ namespace ApiProdutos.Controllers
 
         // PUT: Atualizar informação de um produto
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Atualiza os dados de um produto de acordo com o ID.")]
         public async Task<IActionResult> PutProduto(int id, Produto produto)
         {
             if (id != produto.Id)
@@ -65,6 +69,7 @@ namespace ApiProdutos.Controllers
 
         // POST: Criar um novo produto
         [HttpPost]
+        [SwaggerOperation(Summary = "Cria um novo registro de produto de acordo com as informações inseridas.")]
         public async Task<ActionResult<Produto>> CreateProduto(Produto produto)
         {
             _context.Produtos.Add(produto);
@@ -75,6 +80,7 @@ namespace ApiProdutos.Controllers
 
         // DELETE: Deleta um produto
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Deleta um produto de acordo com o ID.")]
         public async Task<IActionResult> DeleteProduto(int id)
         {
             var produto = await _context.Produtos.FindAsync(id);
